@@ -9,7 +9,7 @@ fetch("../js/dados.json")
     let out = "";
     for(let cliente of clientes){
         out +=`
-
+                <div class="classConteudo">
                     <td class="TblConteudo">${cliente.nome}</td>
                     <td class="TblConteudo">${cliente.veiculo}</td>
                     <td class="TblConteudo">${cliente.placa}</td>
@@ -20,7 +20,8 @@ fetch("../js/dados.json")
                     </td>
                     <td class="TblConteudo">
                         <button id="deletar">Deletar</button>
-                    </td>       
+                    </td>      
+                    </div>
         `;
     }
     placeholder.innerHTML = out;

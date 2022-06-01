@@ -3,27 +3,41 @@ section{
     width: 80vw;
     height: 60vh;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 th, td {
     padding: 0px;  /* cellpadding */
 }
 table{
     width: 100%;
-    height: 0;
+    height: 100%;
     overflow-y: auto;
     border-collapse: collapse; border-spacing: 0; /* cellspacing */
+    display: flex;
+    flex-direction: column;
+
+}
+tbody{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .tblTitulo{
-    width:0vw;
-    height: 10vh;
+    width:80vw;
+    height: 8vh;
     background-color:#8b8b8b;
     color: black;
     border: solid 0.1px;
     font: 2em sans-serif white;
 }
+.trConteudo{
+    width:80vw;
+}
 .TblConteudo{
-    border-bottom: solid 2px #a1a1a1;
-    width: 0vw;
+    
+    /* border-bottom: solid 2px #a1a1a1; */
+    border: solid 2px #a1a1a1;
+    width:11.35vw;
     height: 8vh;
     background-color:#c2bebe;
     text-align: center;
