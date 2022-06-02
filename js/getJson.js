@@ -5,23 +5,34 @@ fetch("../js/dados.json")
 .then(function(json){
     const clientes = json.estacionamento[0].clientes;
 
-    let placeholder = document.querySelector(".trConteudo");
-    let out = "";
+    let placeholder = document.querySelector("#tabela");
+    let out = `
+                <tr id="trTitulo">
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">Nome</th>
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">Veículo</th>
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">Placa</th>
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">Data</th>
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">H.Entrada</th>
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">Editar</th>
+                    <th id="dkTheme-tblTitulo" class="tblTitulo">Encerrar</th>
+                </tr>
+    `;
     for(let cliente of clientes){
         out +=`
-                <div class="classConteudo">
-                    <td class="TblConteudo">${cliente.nome}</td>
-                    <td class="TblConteudo">${cliente.veiculo}</td>
-                    <td class="TblConteudo">${cliente.placa}</td>
-                    <td class="TblConteudo">${cliente.dataEntrada}</td>
-                    <td class="TblConteudo">${cliente.horaSaida}</td>
-                    <td class="TblConteudo">
+      
+            <tr class="trConteudo">
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">${cliente.nome}</td>
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">${cliente.veiculo}</td>
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">${cliente.placa}</td>
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">${cliente.dataEntrada}</td>
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">${cliente.horaSaida}</td>
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">
                         <button id="editar">Editar</button>
                     </td>
-                    <td class="TblConteudo">
+                    <td id="dkTheme-tblConteudo" class="TblConteudo">
                         <button id="deletar">Deletar</button>
-                    </td>      
-                    </div>
+                    </td>     
+                </tr> 
         `;
     }
     placeholder.innerHTML = out;

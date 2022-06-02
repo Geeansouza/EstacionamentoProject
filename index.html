@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/section.css">
     <link rel="stylesheet" href="css/footer.css">
-    <script src="js/darkMode.js"></script>
-    <script src="js/getJson.js"></script>
+    <script src="js/darkMode.js" defer></script>
+    <script src="js/getJson.js" defer></script>
     <title>Estacionamento</title>
 </head>
 <body>
     <header>
-        <div id="sectionLogo">
+        <div class="dkTheme-sectionLogo" id="sectionLogo">
             <img id="logo" src="img/fastParkingLogo.png" alt="">
             <button id="btnRelatorio">Relatórios</button>
         </div>
-        <div id="sectionInfo">
+        <div class="theme-changeSectioninfo" id="sectionInfo">
             <p class="headerTextSection">Vagas Totais:60</p>
             <p class="headerTextSection">Vagas Restantes:3</p>
             <p class="headerTextSection">Valor 1ª HORA: R$#</p>
@@ -27,40 +27,19 @@
             <div></div>
         </div>
     </header>
-    <main>
+    <main class="theme-change">
         <h1>Veículos Estacionados</h1>
         <section id="tblSection">
-            <table id="tabela">
-                <tr id="trTitulo">
-                    <th class="tblTitulo">Nome</th>
-                    <th class="tblTitulo">Veículo</th>
-                    <th class="tblTitulo">Placa</th>
-                    <th class="tblTitulo">Data</th>
-                    <th class="tblTitulo">H.Entrada</th>
-                    <th class="tblTitulo">Editar</th>
-                    <th class="tblTitulo">Encerrar</th>
-                </tr>
-                <tr class="trConteudo">
-                    <!-- <td class="TblConteudo">Carlos</td>
-                    <td class="TblConteudo">Celta</td>
-                    <td class="TblConteudo">FKT5L-5446</td>
-                    <td class="TblConteudo">21/02/2022</td>
-                    <td class="TblConteudo">22:50</td>
-                    <td class="TblConteudo">
-                        <button id="editar">Editar</button>
-                    </td>
-                    <td class="TblConteudo">
-                        <button id="deletar">Deletar</button>
-                    </td> -->
-                </tr>
+            
+            <table class="dkTheme-table" id="tabela">
             </table>
             </section>
         <button id="btnAddVeiculo">Adicionar Novo Veículo</button>
     </main>
-    <footer>
+    <footer class="dkTheme-Footer">
         <div id="btnDarkMode">
             <label class="switch">
-                <input onclick="ActDarkMode() "type="checkbox">
+                <input id="btn-dark"  type="checkbox">
                 <span class="slider"></span>
             </label>
         </div>
