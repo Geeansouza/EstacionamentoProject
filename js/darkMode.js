@@ -57,6 +57,21 @@ function darkTable() {
     });
 }
 
+// document.documentElement.style.setProperty('--bkModal', '#fff');
+console.log(root);
+var root = document.querySelector(":root")
+function darkMoldal(){
+    
+    const currentBkModal = getComputedStyle(document.documentElement).getPropertyValue('--bkModal');
+    
+    if (currentBkModal == "#002855") { 
+        document.documentElement.style.setProperty('--bkModal', '#fff');
+    } else {
+        document.documentElement.style.setProperty('--bkModal', '#002855');
+    }
+
+    console.log(getComputedStyle(document.documentElement).getPropertyValue('--bkModal'))
+}
 //chamando todoas as funções para executar depois
 function allStylesDark(){
     darkMain();
@@ -66,6 +81,7 @@ function allStylesDark(){
     darkSectionlogo();
     darkFooter();
     darkTable();
+    darkMoldal();
 }
 //executando a função acima ao click do "button" dark mode
 document.getElementById('btn-dark').addEventListener('change', allStylesDark) 

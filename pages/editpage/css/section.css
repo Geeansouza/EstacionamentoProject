@@ -16,7 +16,27 @@ section{
 .textBoxEdit{
     font-size: 1.5rem;
 }
-#inputBoxEdit{
+#inputBoxEdit1{
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    box-shadow: 11px 16px 15px -3px rgba(0,0,0,0.24);
+}
+#inputBoxEdit2{
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    box-shadow: 11px 16px 15px -3px rgba(0,0,0,0.24);
+}
+#inputBoxEdit3{
     margin-top: 20px;
     width: 200px;
     height: 30px;

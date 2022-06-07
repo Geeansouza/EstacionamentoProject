@@ -30,7 +30,7 @@ fetch("../js/dados.json")
                         <button id="editar">Editar</button>
                     </td>
                     <td id="dkTheme-tblConteudo" class="TblConteudo">
-                        <button id="deletar">Deletar</button>
+                        <button id="deletar">Encerrar</button>
                     </td>     
                 </tr> 
         `;
@@ -38,3 +38,4 @@ fetch("../js/dados.json")
     placeholder.innerHTML = out;
 }
 )
+document.getElementById('print').addEventListener('click', ()=>print())

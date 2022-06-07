@@ -10,6 +10,7 @@
 body{
     overflow: hidden;
 }
+
 .dark-mode {
     background-color: #001233 !important;
     color: white !important;
